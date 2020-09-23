@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    container_name: example.com
+    ports:
+      - 80:80
+    volumes:
+      - ./html:/var/www/html
+      - ./data:/var/www/data
+      - ./model:/var/www/model
+      - ./php.ini:/usr/local/etc/php/php.ini
